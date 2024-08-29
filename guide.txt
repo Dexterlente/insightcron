@@ -1,0 +1,12 @@
+#DUMP PG tables and DATA
+pg_dump -U postgres -h localhost -d mydatabase -F c -b -v -f mydatabase.dump
+?RESTOR WITH TABLES
+pg_restore -U postgres -d mydatabase -v mydatabase.dump
+
+Schema Only: If you only want the schema (table structures) without the data:
+
+pg_dump -U postgres -h localhost -d mydatabase --schema-only -F c -v -f mydatabase_schema_only.dump
+
+Data Only
+
+pg_dump -U postgres -h localhost -d mydatabase --data-only -F c -v -f mydatabase_data_only.dump
