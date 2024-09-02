@@ -35,4 +35,3 @@ def repo_contributors():
 
 repo_contributors()
 # get_monthly_commit()
-# TODO
